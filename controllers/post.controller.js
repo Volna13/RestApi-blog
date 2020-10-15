@@ -3,7 +3,7 @@ const Tutorial = db.Posts;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new post
-exports.create = (req, res) => {
+exports.createPost = (req, res) => {
     // Validate request
     if (!req.body.title) {
         res.status(400).send({
@@ -15,12 +15,11 @@ exports.create = (req, res) => {
     // Create a Tutorial
     const post = {
         title: req.body.title,
-        description: req.body.description,
-        published: req.body.published ? req.body.published : false
+        body: req.body.body,
     };
 
     // Save Tutorial in the database
-    Tutorial.create(post)
+    Post.create(post)
         .then(data => {
             res.send(data);
         })
