@@ -8,12 +8,12 @@ router.get('/getAllPost', function(req, res, next) {
 
 /* === GET post by Id === */
 router.get('/:id', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send('post with id');
 });
 
 /* === Add new post === */
 router.post('/addPost', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send('add new post');
 });
 
 module.exports = router;

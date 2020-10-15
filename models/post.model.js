@@ -1,15 +1,16 @@
 module.exports = (sequelize, Sequelize) => {
-    const Post = sequelize.define("Post", {
+    const Post = sequelize.define("post", {
         id: {
             allowNull: false,
             autoIncrement: true,
             primaryKey: true,
             type: Sequelize.INTEGER,
         },
-        user_id: {
-            type: Sequelize.INTEGER,
-            allowNull: false,
-        },
+        // userId: {
+        //     type: Sequelize.INTEGER,
+        //     allowNull: false,
+        //     primaryKey: true,
+        // },
         title: {
             type: Sequelize.STRING,
             allowNull: false,

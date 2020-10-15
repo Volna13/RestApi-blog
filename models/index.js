@@ -21,9 +21,26 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 // console.log(db);
-db.comment = require("./comment.model.js")(sequelize, Sequelize);
-db.post = require("./post.model.js")(sequelize, Sequelize);
-db.user = require("./user.model.js")(sequelize, Sequelize);
+/*=== config connect tables ===*/
+db.comments = require("./comment.model.js")(sequelize, Sequelize);
+db.posts = require("./post.model.js")(sequelize, Sequelize);
+db.users = require("./user.model.js")(sequelize, Sequelize);
+
+/*=== config association ===*/
+db.posts.hasMany(db.comments, { as: "comments" });
+db.comments.belongsTo(db.posts, {
+    as: "post",
+});
+
+db.users.hasMany(db.comments, { as: "comments" });
+db.comments.belongsTo(db.users, {
+    as: "user",
+});
+
+db.users.hasMany(db.posts, { as: "posts" });
+db.posts.belongsTo(db.users, {
+    as: "user",
+});
 
 module.exports = db;
 

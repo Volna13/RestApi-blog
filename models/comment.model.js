@@ -1,20 +1,22 @@
 module.exports = (sequelize, Sequelize) => {
     // console.log(Sequelize.INTEGER);
-    const Comment = sequelize.define("Comment", {
+    const Comment = sequelize.define("comment", {
         id: {
             allowNull: false,
             autoIncrement: true,
             primaryKey: true,
             type: Sequelize.INTEGER,
         },
-        post_id: {
-            type: Sequelize.INTEGER,
-            allowNull: false,
-        },
-        user_id: {
-            type: Sequelize.INTEGER,
-            allowNull: false,
-        },
+        // postId: {
+        //     type: Sequelize.INTEGER,
+        //     primaryKey: true,
+        //     allowNull: false,
+        // },
+        // userId: {
+        //     type: Sequelize.INTEGER,
+        //     primaryKey: true,
+        //     allowNull: false,
+        // },
         comment: {
             type: Sequelize.STRING,
             allowNull: false,
