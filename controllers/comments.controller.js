@@ -3,9 +3,8 @@ const Comment = db.comments;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Comment
-exports.createComment = (req, res) => {
+exports.createComment = async (req, res) => {
     // Validate request
-    console.log(req.body);
     if (!req.body.comment) {
         res.status(400).send({
             message: "Content comment can not be empty!"
@@ -20,29 +19,24 @@ exports.createComment = (req, res) => {
     };
 
     //Save comment in DB
-    Comment.create(comment)
-        .then(data => {
-            res.send(data)
+    try {
+        const newComment = await Comment.create(comment);
+        res.status(201).send(newComment);
+    } catch (e) {
+        res.status(500).send({
+            message: e.message || "Some error occurred while creating the comment."
         })
-        .catch(err => {
-            res.status(500).send({
-                message : err.message || "Some error occurred while creating the comment."
-            })
-        })
+    }
 };
-
 // Retrieve all Comments from the database.
-exports.findAllComment = (req, res) => {
+exports.findAllComment = async (req, res) => {
     const postId = req.params.id;
-
-    Comment.findAll({where: {postId: postId}})
-        .then(data =>{
-            res.send(data)
+    try {
+        const allComment = await Comment.findAll({where: {postId: postId}});
+        res.status(200).send(allComment);
+    } catch (e) {
+        res.status(500).send({
+            message: e.message || "Some error occurred while retrieving comments."
         })
-        .catch(err =>{
-            res.status(500).send({
-                message : err.message || "Some error occurred while retrieving comments."
-            })
-        })
-
+    }
 };

@@ -3,7 +3,7 @@ const Post = db.posts;
 const Op = db.Sequelize.Op;
 
 /* === Create and Save a new post === */
-exports.createPost = (req, res) => {
+exports.createPost = async (req, res) => {
     // Validate request
     if (!req.body.title) {
         res.status(400).send({
@@ -19,45 +19,40 @@ exports.createPost = (req, res) => {
     };
 
     // Save Tutorial in the database
-    Post.create(post)
-        .then(console.log(post))
-        .then(data => {
-            res.send(data);
+    try {
+        const newComment = await Post.create(post)
+        res.status(201).send(newComment);
+    } catch (e) {
+        res.status(500).send({
+            message: e.message || "Some error occurred while creating the Post."
         })
-        .catch(err => {
-            res.status(500).send({
-                message: err.message || "Some error occurred while creating the Post."
-            });
-        });
+    }
 };
 
-exports.findAllPosts = (req, res) => {
+exports.findAllPosts = async (req, res) => {
     const title = req.query.title;
 
     let condition = title ? {title: {[Op.like]: `%${title}%`}} : null;
-    Post.findAll({where: condition})
-        .then(data => {
-            res.send(data);
+    try {
+        const allPost = await Post.findAll({where: condition})
+        res.status(200).send(allPost);
+    } catch (e) {
+        res.status(500).send({
+            message: e.message || "Some error occurred while retrieving posts."
         })
-        .catch(err => {
-            res.status(500).send({
-                message:
-                    err.message || "Some error occurred while retrieving posts."
-            });
-        });
-};
+    }
+}
 
 /* === Find a single Post with an id === */
-exports.findOnePost = (req, res) => {
+exports.findOnePost = async (req, res) => {
     const id = req.params.id;
 
-    Post.findByPk(id)
-        .then(data => {
-            res.send(data);
-        })
-        .catch(err => {
-            res.status(500).send({
-                message: "Error retrieving Post with id=" + id
-            });
+    try {
+        const onePost = await Post.findByPk(id);
+        res.status(200).send(onePost);
+    }catch(e){
+        res.status(500).send({
+            message: "Error retrieving Post with id=" + id
         });
+    }
 };
