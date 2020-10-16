@@ -1,5 +1,5 @@
 const db = require("../models");
-const Tutorial = db.Posts;
+const Tutorial = db.comments;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Comment
