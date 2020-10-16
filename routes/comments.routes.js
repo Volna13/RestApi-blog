@@ -1,14 +1,10 @@
-var express = require('express');
-var router = express.Router();
-
-/* === GET all comments to post === */
-router.get('/getCommentsPost', function(req, res, next) {
-    res.send('respond with a resource');
-});
+const comments = require("../controllers/comments.controller");
+let router = require("express").Router();
 
 /* === Create new comment to post === */
-router.post('/addCommentPost', function(req, res, next) {
-    res.send('respond with a resource');
-});
+router.post('/addCommentPost/:id', comments.createComment);
+
+/* === GET all comments to post === */
+router.get('/getCommentsPost/:id', comments.findAllComment);
 
 module.exports = router;

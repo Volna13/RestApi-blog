@@ -26,8 +26,7 @@ exports.createPost = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message:
-                    err.message || "Some error occurred while creating the Post."
+                message: err.message || "Some error occurred while creating the Post."
             });
         });
 };
@@ -35,8 +34,8 @@ exports.createPost = (req, res) => {
 exports.findAllPosts = (req, res) => {
     const title = req.query.title;
 
-    let condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
-    Post.findAll({ where: condition })
+    let condition = title ? {title: {[Op.like]: `%${title}%`}} : null;
+    Post.findAll({where: condition})
         .then(data => {
             res.send(data);
         })
