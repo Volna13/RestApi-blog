@@ -1,5 +1,3 @@
-const jwt = require("jsonwebtoken");
-const jwtConfig = require("../config/jwt.config")
 const db = require("../models");
 const Post = db.posts;
 const Op = db.Sequelize.Op;
@@ -12,7 +10,6 @@ exports.createPost = async (req, res) => {
         });
         return;
     }
-    console.log(req)
     await createPost(req, res);
     console.log('SUCCESS: Connected to protected route');
     res.status(200).send({
@@ -37,7 +34,7 @@ async function createPost(req, res) {
             message: e.message || "Some error occurred while creating the Post."
         })
     }
-};
+}
 
 exports.findAllPosts = async (req, res) => {
     const title = req.query.title;

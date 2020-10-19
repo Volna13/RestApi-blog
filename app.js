@@ -1,22 +1,19 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var indexRoutes = require('./routes/index.routes');
-var authRoutes = require('./routes/auth.routes');
-var postRoutes = require('./routes/post.routes');
-var commentsRoutes = require('./routes/comments.routes');
+const indexRoutes = require('./routes/index.routes');
+const authRoutes = require('./routes/auth.routes');
+const postRoutes = require('./routes/post.routes');
+const commentsRoutes = require('./routes/comments.routes');
 
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-var jwt = require('jsonwebtoken');
-var token = jwt.sign({ foo: 'bar' }, 'secretKey');
+const app = express();
 
-var app = express();
-
-var corsOptions = {
+const corsOptions = {
     origin: "http://localhost:3000"
 };
 
@@ -40,6 +37,8 @@ app.use('/post', postRoutes);
 app.use('/comments', commentsRoutes);
 
 const db = require("./models");
+
+
 db.sequelize.sync()
     .then(result => {
         console.log("\r\nLOG Config sequelize: name db: ", result.config.database);

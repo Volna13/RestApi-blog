@@ -1,6 +1,5 @@
 const db = require("../models");
 const Comment = db.comments;
-const Op = db.Sequelize.Op;
 
 // Create and Save a new Comment
 exports.createComment = async (req, res) => {
@@ -15,12 +14,14 @@ exports.createComment = async (req, res) => {
     //Create comment
     const comment = {
         comment: req.body.comment,
-        postId: req.params.id
+        postId: parseInt(req.params.id),
+        userId: req.user.userId
     };
 
     //Save comment in DB
     try {
         const newComment = await Comment.create(comment);
+        console.log(newComment)
         res.status(201).send(newComment);
     } catch (e) {
         res.status(500).send({

@@ -4,7 +4,6 @@ const db = require("../models");
 const jwtConfig = require("../config/jwt.config");
 
 const User = db.users;
-const Op = db.Sequelize.Op;
 
 // Create and Save a new User
 exports.createUser = async (req, res) => {
@@ -14,8 +13,6 @@ exports.createUser = async (req, res) => {
             message: "Field Email can`t be empty"
         })
     }
-
-    //bvrypt
     const salt = bcrypt.genSaltSync(10)
     //create user
     const user = {
@@ -29,7 +26,6 @@ exports.createUser = async (req, res) => {
     const candidate = await User.findOne({where: {email: req.body.email}})
     if (candidate) {
         res.status(409).send({
-            log: err.message,
             message: "This email is already in use"
         })
     } else {
@@ -50,13 +46,13 @@ exports.loginUser = async (req, res) => {
     const candidate = await User.findOne({where: {email: req.body.email}})
     if (candidate) {
         //compare Password
-        pwdResult = bcrypt.compareSync(req.body.password, candidate.password)
+        const pwdResult = bcrypt.compareSync(req.body.password, candidate.password)
         if (pwdResult) {
             //JWT generation
             const token = jwt.sign({
                 email: candidate.email,
                 userId: candidate.id,
-            }, jwtConfig.key, {expiresIn: 60 * 60});
+            }, jwtConfig.JWT_SECRET, {expiresIn: 60 * 60});
 
             res.status(200).send({
                 token: `Bearer ${token}`
