@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const db = require("../models");
-const keys = require("../config/keys.config");
+const jwtConfig = require("../config/jwt.config");
 
 const User = db.users;
 const Op = db.Sequelize.Op;
@@ -56,7 +56,7 @@ exports.loginUser = async (req, res) => {
             const token = jwt.sign({
                 email: candidate.email,
                 userId: candidate.id,
-            }, keys.jwt, {expiresIn: 60 * 60});
+            }, jwtConfig.key, {expiresIn: 60 * 60});
 
             res.status(200).send({
                 token: `Bearer ${token}`
