@@ -3,13 +3,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index.routes');
-var authRouter = require('./routes/auth.routes');
-var postRouter = require('./routes/post.routes');
-var commentsRouter = require('./routes/comments.routes');
+var indexRoutes = require('./routes/index.routes');
+var authRoutes = require('./routes/auth.routes');
+var postRoutes = require('./routes/post.routes');
+var commentsRoutes = require('./routes/comments.routes');
 
 const bodyParser = require("body-parser");
 const cors = require("cors");
+
+var jwt = require('jsonwebtoken');
+var token = jwt.sign({ foo: 'bar' }, 'secretKey');
 
 var app = express();
 
@@ -31,10 +34,10 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use("/", indexRouter)
-app.use('/auth', authRouter);
-app.use('/post', postRouter);
-app.use('/comments', commentsRouter);
+app.use("/", indexRoutes)
+app.use('/auth', authRoutes);
+app.use('/post', postRoutes);
+app.use('/comments', commentsRoutes);
 
 const db = require("./models");
 db.sequelize.sync()
