@@ -2,6 +2,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const db = require("../models");
 const jwtConfig = require("../config/jwt.config");
+const errorHandler = require("../utils/errorHandler.utils")
 
 const User = db.users;
 
@@ -34,9 +35,7 @@ exports.createUser = async (req, res) => {
             User.create(user)
             res.status(201).send(user)
         } catch (e) {
-            res.status(500).send({
-                message: e.message || "Some error occurred while creating the User."
-            })
+            errorHandler.error500(res, e)
         }
     }
 };
