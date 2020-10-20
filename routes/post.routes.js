@@ -8,7 +8,7 @@ router.post('/addPost', jwtConfig.checkAuth, postsController.createPost)
 /* === GET all posts with conditions. === */
 router.get('/getAllPost', postsController.findAllPosts)
 
-/* === GET post by Id === */б
+/* === GET post by Id === */
 router.get('/:id', postsController.findOnePost)
 
 module.exports = router;
