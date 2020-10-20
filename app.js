@@ -36,9 +36,22 @@ app.use('/auth', authRoutes);
 app.use('/post', postRoutes);
 app.use('/comments', commentsRoutes);
 
+//error handler
+app.use((err,req,res,next) => {
+    console.log("Error: ", err.stack);
+    res.status(500).json({
+        errorMsg: err.stack
+    });
+})
+app.use((req,res) => {
+    console.log("Error 404");
+    res.status(500).json({
+        errorMsg: "Error 404. Page not found"
+    });
+})
+
+//DB config
 const db = require("./models");
-
-
 db.sequelize.sync()
     .then(result => {
         console.log("\r\nLOG Config sequelize: name db: ", result.config.database);
