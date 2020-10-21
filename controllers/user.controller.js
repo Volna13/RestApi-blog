@@ -11,22 +11,22 @@ const {regSchema, loginSchema} = require("../utils/validationSchema")
 exports.createUser = async (req, res, next) => {
     try {
         //validate request
-        const result = await regSchema.validateAsync(req.body)
+        const validData = await regSchema.validateAsync(req.body)
 
         const salt = bcrypt.genSaltSync(10)
         //create user
         const user = {
-            firstName: result.firstName,
-            lastName: result.lastName,
-            email: result.email,
-            password: bcrypt.hashSync(result.body.password, salt),
-            age: result.age
+            firstName: validData.firstName,
+            lastName: validData.lastName,
+            email: validData.email,
+            password: bcrypt.hashSync(validData.password, salt),
+            age: validData.age
         };
 
-        const doesExist = await User.findOne({where: {email: result.email}})
+        const doesExist = await User.findOne({where: {email: validData.email}})
         if (doesExist) {
             res.status(409).send({
-                message: `This email (${result.email}) is already in use`
+                message: `This email (${validData.email}) is already in use`
             })
         } else {
             try {
@@ -46,12 +46,13 @@ exports.createUser = async (req, res, next) => {
 // Find and Authorize a new User
 exports.loginUser = async (req, res, next) => {
     try {
-        const result = await loginSchema.validateAsync(req.body)
+        //Validate request
+        const validData = await loginSchema.validateAsync(req.body)
 
-        const candidate = await User.findOne({where: {email: result.email}})
+        const candidate = await User.findOne({where: {email: validData.email}})
         if (candidate) {
             //compare Password
-            const pwdResult = bcrypt.compareSync(result.password, candidate.password)
+            const pwdResult = bcrypt.compareSync(validData.password, candidate.password)
             if (pwdResult) {
                 //JWT generation
                 const token = jwt.sign({

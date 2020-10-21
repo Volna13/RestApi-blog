@@ -1,32 +1,34 @@
 const db = require("../models");
 const Post = db.posts;
 const Op = db.Sequelize.Op;
+const {postSchema} = require("../utils/validationSchema")
 
 /* === Create and Save a new post === */
-exports.createPost = async (req, res) => {
-    if (!req.body.title) {
-        res.status(400).send({
-            message: "Content post can not be empty!",
+exports.createPost = async (req, res, next) => {
+    try {
+        //Validation request
+        const validData = await postSchema.validateAsync(req.body);
+        await createPost(validData, req, res, next);
+        console.log('SUCCESS: Connected to protected route');
+        res.status(200).send({
+            message: 'Successful log in',
         });
-        return;
+    } catch (e) {
+        if (e.isJoi === true) e.status = 422
+        next(e)
     }
-    await createPost(req, res);
-    console.log('SUCCESS: Connected to protected route');
-    res.status(200).send({
-        message: 'Successful log in',
-    });
 }
 
 // Create a Post
-async function createPost(req, res) {
-    const post = {
-        title: req.body.title,
-        body: req.body.body,
-        userId: req.user.userId,
-    };
-
-    // Save Tutorial in the database
+async function createPost(validData, req, res, next) {
     try {
+        const post = {
+            title: validData.title,
+            body: validData.body,
+            userId: req.user.userId,
+        };
+
+        // Save Tutorial in the database
         const newPost = await Post.create(post)
         res.status(201).send(newPost);
     } catch (e) {

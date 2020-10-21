@@ -13,7 +13,18 @@ const loginSchema = joi.object({
     password: joi.string().min(3).max(30).trim().required(),
 })
 
+const commentSchema = joi.object({
+    comment: joi.string().required(),
+})
+
+const postComment = joi.object({
+    title: joi.string().required(),
+    body: joi.string().required(),
+})
+
 module.exports = {
     regSchema,
     loginSchema,
+    commentSchema,
+    postComment
 }
