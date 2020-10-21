@@ -1,11 +1,11 @@
-const userController = require("../controllers/user.controller");
-let router = require("express").Router();
-
+const router = require('express').Router();
+const asyncHandler = require('express-async-handler');
+const userController = require('../controllers/user.controller');
 
 /* === Create new user. === */
-router.post('/register', userController.createUser);
+router.post('/register', asyncHandler(userController.createUser));
 
 /* === Log-in user === */
-router.post('/login', userController.loginUser);
+router.post('/login', asyncHandler(userController.loginUser));
 
 module.exports = router;

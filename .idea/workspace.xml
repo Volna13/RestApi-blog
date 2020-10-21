@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:raBlog" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:dev" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a45e5598-55c9-4cfa-bf8b-fcf3f9677acf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/db.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/db.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/jwt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/jwt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/comments.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/comments.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/post.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/post.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/comment.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/comment.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/post.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/post.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/comments.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/comments.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/post.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/post.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/errorHandler.utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/errorHandler.utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/validationSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validationSchema.js" afterDir="false" />
+    </list>
+    <list id="a33f10b5-64c5-47de-a01f-9686db82085c" name="add authorization and fix bugs" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="d3727891c9c6895e411aaca2ef24ba92fbcde04a" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1iGw951TjW9aJxUN7v2pjULcDSB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.2" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.12.68" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/sequelize/models" />
+      <recent name="$PROJECT_DIR$/sequelize" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/routes" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.lint">
+    <configuration name="eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eslint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="prettier" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prettier" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start-dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start-dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.lint" />
+        <item itemvalue="npm.prettier" />
+        <item itemvalue="npm.eslint" />
+        <item itemvalue="npm.start-dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a45e5598-55c9-4cfa-bf8b-fcf3f9677acf" name="Default Changelist" comment="" />
+      <changelist id="a33f10b5-64c5-47de-a01f-9686db82085c" name="add authorization and fix bugs" comment="" />
+      <created>1601547081976</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601547081976</updated>
+      <workItem from="1601547083458" duration="2083000" />
+      <workItem from="1601549346477" duration="12975000" />
+      <workItem from="1601633480302" duration="2860000" />
+      <workItem from="1601640968402" duration="1828000" />
+      <workItem from="1601889534331" duration="2570000" />
+      <workItem from="1601892405089" duration="4768000" />
+      <workItem from="1601900564037" duration="2825000" />
+      <workItem from="1601905486025" duration="2398000" />
+      <workItem from="1602496886535" duration="1439000" />
+      <workItem from="1602580032470" duration="16220000" />
+      <workItem from="1602753600434" duration="11254000" />
+      <workItem from="1602839653132" duration="16596000" />
+      <workItem from="1603099245395" duration="165000" />
+      <workItem from="1603099425768" duration="11570000" />
+      <workItem from="1603112556570" duration="168000" />
+      <workItem from="1603112755252" duration="752000" />
+      <workItem from="1603113570649" duration="2202000" />
+      <workItem from="1603183267088" duration="6466000" />
+      <workItem from="1603270837573" duration="9369000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix DB and add controllers files" />
+    <MESSAGE value="add authorization and registration" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2598" y="267" width="995" height="575" key="#ESLint" timestamp="1603281550129">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2598" y="267" width="995" height="575" key="#ESLint/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603281550129" />
+    <state x="2540" y="235" width="732" height="639" key="#Inspections" timestamp="1603110185176">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2540" y="235" width="732" height="639" key="#Inspections/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603110185176" />
+    <state x="2555" y="349" width="703" height="412" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603277418954">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2555" y="349" width="703" height="412" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603277418954" />
+    <state x="2636" y="392" width="539" height="326" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1601634180960">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2636" y="392" width="539" height="326" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1601634180960" />
+    <state x="2082" y="128" width="1658" height="852" key="DiffContextDialog" timestamp="1603109587182">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2082" y="128" width="1658" height="852" key="DiffContextDialog/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603109587182" />
+    <state x="2686" y="312" key="FileChooserDialogImpl" timestamp="1603111895776">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2686" y="312" key="FileChooserDialogImpl/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603111895776" />
+    <state x="2670" y="453" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1603102106895">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2670" y="453" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603102106895" />
+    <state width="916" height="421" key="GridCell.Tab.0.bottom" timestamp="1603280220337">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="916" height="421" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603280220337" />
+    <state width="916" height="421" key="GridCell.Tab.0.center" timestamp="1603280220336">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="916" height="421" key="GridCell.Tab.0.center/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603280220336" />
+    <state width="916" height="421" key="GridCell.Tab.0.left" timestamp="1603280220336">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="916" height="421" key="GridCell.Tab.0.left/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603280220336" />
+    <state width="916" height="421" key="GridCell.Tab.0.right" timestamp="1603280220336">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="916" height="421" key="GridCell.Tab.0.right/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603280220336" />
+    <state x="2331" y="189" width="1270" height="732" key="SettingsEditor" timestamp="1603280008197">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2331" y="189" width="1270" height="732" key="SettingsEditor/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603280008197" />
+    <state x="2749" y="463" width="314" height="184" key="VCS.ChangelistChooser" timestamp="1603101650833">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2749" y="463" width="314" height="184" key="VCS.ChangelistChooser/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603101650833" />
+    <state x="2477" y="154" width="857" height="801" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603275717327">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2477" y="154" width="857" height="801" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603275717327" />
+    <state x="2585" y="259" width="652" height="590" key="find.popup" timestamp="1603113401320">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2585" y="259" width="652" height="590" key="find.popup/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603113401320" />
+    <state x="2597" y="184" width="618" height="742" key="git4idea.branch.GitSmartOperationDialog" timestamp="1601552656348">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2597" y="184" width="618" height="742" key="git4idea.branch.GitSmartOperationDialog/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1601552656348" />
+    <state x="2575" y="253" key="run.anything.popup" timestamp="1603279002931">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2575" y="253" key="run.anything.popup/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603279002931" />
+    <state x="2574" y="260" width="674" height="678" key="search.everywhere.popup" timestamp="1603114511656">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2574" y="260" width="674" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.28.1920.1052@1920.0.1920.1080" timestamp="1603114511656" />
+  </component>
+</project>
